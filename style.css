@@ -1,3 +1,16 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+section {
+  flex: 1;
+}
 :root {
   --primary-color: #304b71;
   --secondary-color: #6b8aa5;
@@ -61,4 +74,10 @@ img {
 p {
   margin-bottom: 3rem;
   line-height: 1.5rem;
+}
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
