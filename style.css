@@ -71,9 +71,52 @@ img {
   background-color: wheat;
   color: var(--background-color);
 }
+.about-me h2,
+.skills h2,
+h3 {
+  text-align: center;
+}
 p {
   margin-bottom: 3rem;
   line-height: 1.5rem;
+}
+.about-me {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.about-me p {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.grid-item {
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.grid-item i {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #0078d4;
+}
+
+.grid-item p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
 }
 footer {
   background-color: black;
