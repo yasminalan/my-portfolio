@@ -16,15 +16,16 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
       <div class = "wrapper">
     <section>
+      <section id = "introduction">
       <div class="introduction section-container container">
         <img src="images/portrait.jpeg" alt="my-photo" />
         <div class="introduction-text">
@@ -35,10 +36,13 @@
             enhancing both backend and frontend skills.
             <br>Want to know more about me? Keep reading!</br>
           </p>
-          <a href="#">Download CV</a>
+          <a href="documents/cv.pdf" target="_blank">
+            Download CV  <i class="fas fa-download"></i></a>
         </div>
       </div>
-
+    </section>
+    
+    <section id = "about-me">
       <div class = "about-me section-container">
         <h2>About Me</h2>
         <p>Former chemical engineer with a
@@ -51,6 +55,9 @@
           expertise in a dynamic development
           role.</p>
       </div>
+    </section>
+
+    <section id = "skills">
       <div class = "skills section-container">
         <h2>Skills</h2>
         <h3>What I know?</h3>
@@ -93,6 +100,23 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section id = "projects">
+      <div class = "projects section-container">
+        <h2>Some of My Projects</h2>
+        <div class="project-items">
+          <div class = "project"></div>
+          <div class = "project"></div>
+      </div>
+      <div class="project-items">
+        <div class = "project"></div>
+        <div class = "project"></div>
+      </div>
+      </div>
+    </section>
+
+    <section id = "contact">
       <div class = "contact section-container">
         <h2>Contact</h2>
         <h3>Get in Touch</h3>
@@ -118,6 +142,7 @@
         <button type="submit" class="button">Send</button>
       </form>
       </div>
+    </section>
     </section>
     </div>
     <footer>&copy; 2025 All Rights Reserved.</footer>
