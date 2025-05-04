@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currency Converter</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="bg-image"></div>
+  <div class="container content" style="max-width: 600px;">
+    <div class="d-flex flex-column justify-content-center align-items-center vh-100 gap-5">
+      <div class="card bg-white p-4 shadow w-100">
+        <h1 class="text-center mb-4" style="white-space: nowrap;">Currency Converter</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="col-2">From</th>
+              <th class="col-5">To</th>
+              <th class="col-5">Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label for="amount">From</label></td>
+              <td><input type="number" id="amount" name="amount" class="form-control text-center" value="1"></td>
+              <td><select id="from" class="form-select">
+                </select></td>
+            </tr>
+            <tr>
+              <td>
+                <p>To</p>
+              </td>
+              <td>
+                <p class="text-center fw-bold" id="result"></p>
+              </td>
+              <td><select id="to" class="form-select">
+                </select></td>
+            </tr>
+          </tbody>
+        </table>
+        <button type="button" class="btn btn-success btn-lg" id="myButton">Convert</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
