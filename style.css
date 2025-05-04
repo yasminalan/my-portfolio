@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #304b71;
+  --secondary-color: #6b8aa5;
+  --background-color: #d08116;
+  --font-size: 16px;
+}
+
 html,
 body {
   height: 100%;
@@ -7,84 +14,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding-top: 50px;
 }
 
-nav {
-  margin-top: 0;
-  border: 3px solid #304b71;
-}
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.85);
-}
-
-.section-container {
-  margin-top: 10%;
-}
-
-section {
-  flex: 1;
-}
-:root {
-  --primary-color: #304b71;
-  --secondary-color: #6b8aa5;
-  --background-color: #d08116;
-  --font-size: 16px;
-}
-header {
-  background-color: var(--primary-color);
-}
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-}
-nav li {
-  display: inline-block;
-  text-align: center;
-  width: 10rem;
-}
-nav a {
-  font-size: 1.5rem;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  display: block;
-  padding: 1rem;
-}
-nav a:hover {
-  background-color: white;
-  color: var(--secondary-color);
-}
-h1 {
-  font-size: 3rem;
-}
-img {
-  width: 20%;
-  border-radius: 1.5rem;
-}
-.introduction {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  margin-top: 0px;
-  gap: 5rem;
-}
-.introduction a {
-  text-decoration: none;
-  background-color: var(--background-color);
-  color: wheat;
-  padding: 1rem;
-  border-radius: 2rem;
-}
-.introduction a:hover {
-  background-color: wheat;
-  color: var(--background-color);
-}
 .about-me h2,
 .skills h2,
 .contact h2,
@@ -93,20 +25,112 @@ h3 {
   text-align: center;
   margin-bottom: 30px;
 }
+
+section {
+  height: calc(100vh - 50px);
+}
+
+section:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
 p {
   margin-bottom: 3rem;
   line-height: 1.5rem;
 }
+
+
+/* HEADER AND NAVIGATION */
+
+header {
+  background-color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav {
+  margin-top: 0;
+  border: 3px solid #304b71;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+nav li {
+  display: inline-block;
+  text-align: center;
+  width: 10rem;
+}
+
+nav a {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
+}
+
+nav a:hover {
+  background-color: white;
+  color: var(--secondary-color);
+}
+
+/* INTRODUCTION */
+
+img {
+  width: 20%;
+  height: auto;
+  border-radius: 1.5rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.introduction {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-top: 0px;
+  gap: 5rem;
+}
+
+.introduction a {
+  text-decoration: none;
+  background-color: var(--background-color);
+  color: wheat;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+.introduction a:hover {
+  background-color: wheat;
+  color: var(--background-color);
+}
+
+/* ABOUT ME */
+
 .about-me {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
+
 .about-me p {
   font-size: 1.5rem;
   line-height: 1.5rem;
 }
+
+/* SKILLS */
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -130,31 +154,41 @@ p {
   margin-bottom: 10px;
   color: #0078d4;
 }
+
 .grid-item p {
   margin: 0;
   font-weight: bold;
   color: #333;
 }
+
+/* PROJECTS */
+
 .project {
   width: 25rem;
   height: 20rem;
   background-color: wheat;
 }
+
 .project-items {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 50px;
 }
+
+/* CONTACT */
+
 .contact {
   max-width: 70%;
   margin: 0 auto;
 }
+
 fieldset {
   border: none;
   padding: 2rem;
   text-align: center;
 }
+
 input {
   width: 40rem;
   margin: 0.8rem 0;
@@ -162,6 +196,7 @@ input {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
+
 textarea {
   margin-top: 0.8rem;
   width: 40rem;
@@ -170,11 +205,13 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
+
 input:focus,
 textarea:focus {
   border: 3px solid #304b71;
   outline: none;
 }
+
 .button {
   display: block;
   margin: 2rem auto;
@@ -186,10 +223,14 @@ textarea:focus {
   font-size: 1rem;
   border-radius: 2rem;
 }
+
 .button:hover {
   background-color: wheat;
   color: var(--background-color);
 }
+
+/* FOOTER */
+
 footer {
   background-color: black;
   color: white;
