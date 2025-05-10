@@ -34,31 +34,19 @@ body {
 }
 
 section {
-  height: calc(100vh - 30px);
-  scroll-margin-top: 80px;
-}
-
-#skills {
-  scroll-margin-top: 80px;
-}
-
-#projects {
-  scroll-margin-top: 80px;
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  box-sizing: border-box;
 }
 
 #contact {
   padding: 2rem 0 4rem 0;
-  scroll-margin-top: 150px;
 }
 
 p {
   margin-bottom: 3rem;
   line-height: 1.5rem;
 }
-
-/* section:nth-child(odd) {
-  background-color: rgb(254, 0, 0);
-} */
 
 /* HEADER AND NAVIGATION */
 
@@ -198,8 +186,8 @@ nav a {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  scroll-margin-top: 80px;
-  padding-top: 20px;
+  scroll-margin-top: 50px;
+  /* padding-top: 20px; */
 }
 
 .about-me h2 {
@@ -216,7 +204,7 @@ nav a {
 }
 
 .about-me p {
-  font-size: 1.6rem;
+  font-size: 1.72rem;
   line-height: 1.6;
   margin: 0 auto 2rem;
   max-width: 700px;
@@ -388,6 +376,16 @@ nav a {
   margin: 1rem;
 }
 
+.project-container-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-container-link:hover {
+  opacity: 0.7;
+}
+
 .project {
   width: 20rem;
   height: 20rem;
@@ -418,7 +416,7 @@ nav a {
 /* CONTACT */
 
 #contact {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 50px;
 }
 
 .contact {
@@ -446,21 +444,19 @@ fieldset {
   margin: 0 auto;
 }
 
-input {
-  width: 40rem;
+input,
+textarea {
+  width: 100%;
+  max-width: 40rem;
   margin: 0.8rem 0;
   padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 6px;
+  box-sizing: border-box;
 }
 
 textarea {
-  margin-top: 0.8rem;
-  width: 40rem;
   height: 15rem;
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
 }
 
 input:focus,
@@ -500,4 +496,113 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 0;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+
+  .navbar,
+  nav {
+    display: none;
+  }
+
+  #introduction h1 {
+    font-size: 1.5rem;
+  }
+
+  #introduction h2 {
+    font-size: 1.2rem;
+  }
+
+  #introduction p {
+    font-size: 1rem;
+  }
+
+  .about-me p {
+    font-size: 1.3rem;
+  }
+
+  .project {
+    width: 90%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .project img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+
+  fieldset {
+    padding: 1rem;
+  }
+
+  input,
+  textarea {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+}
+
+/* Media Query for Tablet Devices */
+@media (max-width: 810px) {
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  .about-me p {
+    font-size: 1.4rem;
+    padding: 1rem;
+  }
+
+  .project {
+    width: 15rem !important;
+    height: 15rem !important;
+  }
+
+  .project img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-container {
+    width: 100%;
+  }
+
+  .project {
+    width: 90%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+  }
+
+  .project img {
+    width: 100%;
+    height: auto;
+  }
+
+  input,
+  textarea {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+
+  .button {
+    padding: 14px 35px;
+    font-size: 1.1rem;
+  }
 }
